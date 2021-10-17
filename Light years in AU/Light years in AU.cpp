@@ -1,19 +1,20 @@
-﻿#include <iostream>
-using namespace std;
+#include <iostream>
 
-void au();
+double convert(double);
+using namespace std;
 
 int main()
 {
-    au();
+    double au, lu;
+    cout << "Enter the number of light years: ";
+    cin >> lu; //ввод количества световых лет
+    au = convert(lu);
+    cout << lu << " light years = ";
+    cout << au << " astronomical units" << endl;
+    return 0;
 }
 
-void au()
+double convert(double lu)
 {
-    double light_years, au;
-    cout << "Enter the number of light years: ";
-    cin >> light_years;
-
-    au = light_years * 63240;
-    cout << light_years << " light years = " << au << " astronomical units." << endl;
+    return lu * 63240;
 }
